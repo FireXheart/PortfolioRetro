@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "pixel-hero",
+      "description": "Pixel art moon for hero background",
+      "imageUrl": "https://picsum.photos/seed/pixelmoon/800/800",
+      "imageHint": "moon dark"
+    }
+  ]
+}
