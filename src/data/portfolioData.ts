@@ -136,8 +136,8 @@ export const SOCIAL_LINKS = {
 };
 
 export const STATS = {
-  experience: "27 months",
-  projects: 7,
-  xpEarned: 2400,
-  youtubeSubs: "18.5k"
+  experience: "11 months",
+  projects: 5,
+  xpEarned: 1600,
+  youtubeSubs: "3.2k"
 };
