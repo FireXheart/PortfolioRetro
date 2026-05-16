@@ -19,7 +19,7 @@ export function Hero() {
           className="space-y-6"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-            Hi, I'm <span className="block mt-2">Alex Dev!</span>
+            Hi, I'm <span className="block mt-2">Sourav Kumar Lenka!</span>
           </h1>
           <p className="font-body text-xl text-[#cccccc] max-w-lg leading-relaxed">
             I can do whatever you need, as long as I'm learning something 
@@ -50,7 +50,7 @@ export function Hero() {
                 <PixelArtAvatar size={48} />
               </div>
               <div>
-                <h3 className="font-headline text-xs text-primary uppercase">ALEX DEV</h3>
+                <h3 className="font-headline text-xs text-primary uppercase">SOURAV KUMAR LENKA</h3>
                 <p className="text-[10px] text-muted-foreground">Quick Stats</p>
               </div>
             </div>

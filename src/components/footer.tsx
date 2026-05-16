@@ -33,7 +33,7 @@ export function Footer() {
         </div>
 
         <div className="text-center text-[#555] font-body text-xs space-y-2">
-          <p>© 2026 Alex Dev. Built with <a href="https://react.dev" target="_blank" className="hover:text-primary underline">React</a> & lots of Creativity + Tokens.</p>
+          <p>© 2026 Sourav Kumar Lenka. Built with <a href="https://react.dev" target="_blank" className="hover:text-primary underline">React</a> & lots of Creativity + Tokens.</p>
         </div>
       </div>
     </footer>

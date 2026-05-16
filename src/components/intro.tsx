@@ -19,7 +19,7 @@ export function Intro() {
     <section className="py-24 relative">
       <div className="max-w-3xl mx-auto px-4 text-center mb-16">
         <h2 className="font-headline text-2xl text-primary leading-normal">
-          LET'S START WITH MY NAME — ALEX DEV
+          LET'S START WITH MY NAME — SOURAV KUMAR LENKA
         </h2>
       </div>
 
