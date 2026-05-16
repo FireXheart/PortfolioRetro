@@ -5,11 +5,11 @@
 :root {
   --background: 0 0% 4%;
   --foreground: 0 0% 94%;
-  --primary: 18 77% 50%;
+  --primary: 75 100% 48%;
   --primary-foreground: 0 0% 4%;
   --card: 0 0% 10%;
-  --border: 18 77% 50%;
-  --orange: #e05a1e;
+  --border: 75 100% 48%;
+  --orange: #B6F500;
 }
 
 @layer base {

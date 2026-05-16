@@ -26,28 +26,28 @@ export default {
           foreground: '#f0f0f0',
         },
         primary: {
-          DEFAULT: '#e05a1e',
+          DEFAULT: '#B6F500',
           foreground: '#0a0a0a',
         },
         secondary: {
           DEFAULT: '#111111',
-          foreground: '#e05a1e',
+          foreground: '#B6F500',
         },
         muted: {
           DEFAULT: '#1a1a1a',
           foreground: '#888888',
         },
         accent: {
-          DEFAULT: '#e05a1e',
+          DEFAULT: '#B6F500',
           foreground: '#ffffff',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        border: '#e05a1e',
+        border: '#B6F500',
         input: '#1a1a1a',
-        ring: '#e05a1e',
+        ring: '#B6F500',
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',
@@ -75,7 +75,7 @@ export default {
           '20%': { textShadow: '-2px 0 #ff0000, 2px 0 #0000ff', transform: 'translateX(2px)' },
           '40%': { textShadow: '2px 0 #ff0000, -2px 0 #0000ff', transform: 'translateX(-2px)' },
           '60%': { textShadow: 'none', transform: 'translateX(0)' },
-          '80%': { textShadow: '-1px 0 #ff6600', transform: 'skewX(2deg)' },
+          '80%': { textShadow: '-1px 0 #B6F500', transform: 'skewX(2deg)' },
         },
         'pulse-orange': {
           '0%, 100%': { opacity: '1' },
