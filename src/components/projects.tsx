@@ -21,6 +21,7 @@ export function Projects() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               className="group bg-card border-2 border-primary p-8 flex flex-col h-[380px] hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(224,90,30,0.3)] transition-all duration-300"
+              data-status-hint={`MISSION: ${project.title}`}
             >
               <div className="space-y-4 flex-grow">
                 <span className="text-[10px] font-headline text-[#888] block tracking-widest uppercase">
@@ -34,7 +35,11 @@ export function Projects() {
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tech.map((t, i) => (
-                    <span key={i} className="text-[8px] font-headline bg-primary/10 text-primary px-2 py-1 border border-primary/20">
+                    <span 
+                      key={i} 
+                      className="text-[8px] font-headline bg-primary/10 text-primary px-2 py-1 border border-primary/20"
+                      data-status-hint={`TECH USED: ${t}`}
+                    >
                       {t}
                     </span>
                   ))}
@@ -45,6 +50,7 @@ export function Projects() {
                 <Button 
                   variant="outline" 
                   className="w-full font-headline text-[9px] border-2 border-primary text-primary hover:bg-primary hover:text-black"
+                  data-status-hint="OPENING MISSION LOGS..."
                 >
                   VIEW DETAILS
                 </Button>

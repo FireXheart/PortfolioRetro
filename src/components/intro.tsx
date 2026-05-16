@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { SOCIAL_LINKS } from '@/data/portfolioData';
-import { Github, Linkedin, Youtube, Twitter, Mail, Code } from 'lucide-react';
+import { Github, Linkedin, Youtube, Twitter, Mail } from 'lucide-react';
 
 export function Intro() {
   const qa = [
@@ -16,7 +16,7 @@ export function Intro() {
   ];
 
   return (
-    <section className="py-24 relative">
+    <section id="intro-details" className="py-24 relative" data-status-hint="ACCESSING BIOGRAPHY MODULE...">
       <div className="max-w-3xl mx-auto px-4 text-center mb-16">
         <h2 className="font-headline text-2xl text-primary leading-normal">
           LET'S START WITH MY NAME — SOURAV KUMAR LENKA
@@ -32,13 +32,18 @@ export function Intro() {
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
             className="flex items-start gap-4 font-body text-lg leading-loose"
+            data-status-hint="READING ENCRYPTED DATA..."
           >
             <span className="text-primary text-2xl flex-shrink-0 mt-1">•</span>
             <p>
               <span className="font-bold text-white">{item.q}</span>{' '}
               <span className="text-[#cccccc]">
                 {item.link ? (
-                  <a href={item.link} className="text-primary underline hover:text-orange-400 transition-colors">
+                  <a 
+                    href={item.link} 
+                    className="text-primary underline hover:text-orange-400 transition-colors"
+                    data-status-hint="REDIRECTING TO YOUTUBE LOGS..."
+                  >
                     {item.a}
                   </a>
                 ) : item.a}
@@ -61,6 +66,7 @@ export function Intro() {
                 key={i} 
                 href={social.href}
                 className="flex items-center gap-2 hover:text-primary transition-colors group"
+                data-status-hint={`CONNECTING TO ${social.label.toUpperCase()}...`}
               >
                 <social.icon size={20} className="group-hover:scale-110 transition-transform" />
                 <span className="text-xs font-headline uppercase">{social.label}</span>

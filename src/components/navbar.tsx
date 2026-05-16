@@ -12,8 +12,37 @@ const SECTIONS = [
   { id: 'achievements', label: 'ACHIEVEMENTS' },
 ];
 
+function TypingText({ text }: { text: string }) {
+  const [displayedText, setDisplayedText] = useState('');
+  
+  useEffect(() => {
+    let currentText = '';
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        currentText += text[index];
+        setDisplayedText(currentText);
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 40); // Fast typing speed
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return (
+    <span className="inline-block min-w-[200px]">
+      {displayedText}
+      <span className="animate-pulse bg-black w-2 h-4 inline-block ml-1 align-middle" />
+    </span>
+  );
+}
+
 export function Navbar() {
   const [activeSection, setActiveSection] = useState('intro');
+  const [statusText, setStatusText] = useState('WELCOME TO MY WORLD!');
+  const [isMouseInWindow, setIsMouseInWindow] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,11 +67,42 @@ export function Navbar() {
       if (element) observer.observe(element);
     });
 
-    return () => observer.disconnect();
-  }, []);
+    // Mouse Presence Tracking
+    const handleMouseLeave = () => setIsMouseInWindow(false);
+    const handleMouseEnter = () => setIsMouseInWindow(true);
+    
+    // Global Status Hint Tracking
+    const handleMouseMove = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const hint = target.closest('[data-status-hint]')?.getAttribute('data-status-hint');
+      
+      if (hint) {
+        setStatusText(hint);
+      } else {
+        // Fallback to section based text
+        switch (activeSection) {
+          case 'skills': setStatusText('THESE ARE MY SUPERPOWERS!'); break;
+          case 'experience': setStatusText('STATUS: PROFESSIONAL GRIND'); break;
+          case 'achievements': setStatusText('CHECK OUT MY EPIC LOOT!'); break;
+          case 'projects': setStatusText('MISSION LOGS ARCHIVED'); break;
+          default: setStatusText('WELCOME TO MY WORLD!'); break;
+        }
+      }
+    };
+
+    window.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('mouseenter', handleMouseEnter);
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('mouseenter', handleMouseEnter);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [activeSection]);
 
   useEffect(() => {
-    // Automatically scroll the navbar to show the active item on mobile
     const activeButton = scrollRef.current?.querySelector(`[data-section="${activeSection}"]`);
     if (activeButton && scrollRef.current) {
       activeButton.scrollIntoView({
@@ -52,16 +112,6 @@ export function Navbar() {
       });
     }
   }, [activeSection]);
-
-  const getStatusText = () => {
-    switch (activeSection) {
-      case 'skills': return 'THESE ARE MY SUPERPOWERS!';
-      case 'experience': return 'STATUS: PROFESSIONAL GRIND';
-      case 'achievements': return 'CHECK OUT MY EPIC LOOT!';
-      case 'projects': return 'MISSION LOGS ARCHIVED';
-      default: return 'WELCOME TO MY WORLD!';
-    }
-  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -119,8 +169,8 @@ export function Navbar() {
       </div>
 
       <div className="flex items-center gap-4 flex-shrink-0 ml-4">
-        <div className="hidden lg:block bg-white text-black px-3 py-2 border-2 border-[#333] font-bold">
-          {getStatusText()}
+        <div className="hidden lg:block bg-white text-black px-4 py-2 border-2 border-[#333] font-bold min-w-[280px]">
+          <TypingText text={isMouseInWindow ? statusText : '...'} />
         </div>
         <div className="flex items-center gap-2 border-2 border-primary p-1 bg-card">
           <PixelArtAvatar size={42} />

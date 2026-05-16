@@ -31,11 +31,13 @@ export function Hero() {
               <Button 
                 variant="outline" 
                 className="font-headline text-[9px] px-8 py-6 border-2 border-primary hover:bg-primary/10 transition-all"
+                data-status-hint="ACCESSING INTEL... READY TO READ?"
               >
                 VIEW RESUME
               </Button>
               <Button 
                 className="font-headline text-[9px] px-8 py-6 bg-primary text-black hover:bg-primary/90 shadow-[4px_4px_0px_#79A400] transition-all"
+                data-status-hint="INITIATE RECRUITMENT PROTOCOL?"
               >
                 HIRE ME
               </Button>
@@ -49,7 +51,10 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="w-full max-w-[320px] bg-card border-2 border-primary p-6 font-body">
+          <div 
+            className="w-full max-w-[320px] bg-card border-2 border-primary p-6 font-body"
+            data-status-hint="SCANNING PERSONAL STATS..."
+          >
             <div className="flex items-center gap-4 mb-6">
               <div className="border-2 border-primary p-1">
                 <PixelArtAvatar size={48} />
