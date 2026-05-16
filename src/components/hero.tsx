@@ -31,7 +31,7 @@ export function Hero() {
               <Button variant="outline" className="font-headline text-[9px] px-8 py-6 border-2 hover:border-primary">
                 VIEW RESUME
               </Button>
-              <Button className="font-headline text-[9px] px-8 py-6 bg-primary text-black hover:bg-orange-600 shadow-[4px_4px_0px_#8b3a12]">
+              <Button className="font-headline text-[9px] px-8 py-6 bg-primary text-black hover:bg-primary/90 shadow-[4px_4px_0px_#98CD00]">
                 HIRE ME
               </Button>
             </div>
