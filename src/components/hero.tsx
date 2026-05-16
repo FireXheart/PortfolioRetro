@@ -30,7 +30,7 @@ export function Hero() {
             <div className="flex flex-wrap gap-4">
               <Button 
                 variant="outline" 
-                className="font-headline text-[9px] px-8 py-6 border-2 border-primary hover:bg-primary/10 shadow-[4px_4px_0px_#98CD00] transition-all"
+                className="font-headline text-[9px] px-8 py-6 border-2 border-primary hover:bg-primary/10 transition-all"
               >
                 VIEW RESUME
               </Button>
