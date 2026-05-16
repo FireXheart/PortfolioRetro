@@ -56,8 +56,8 @@ export function Navbar() {
               activeSection === section.id ? 'text-primary' : 'text-muted-foreground'
             }`}
           >
-            <div className={`w-4 h-4 border-2 ${activeSection === section.id ? 'bg-primary border-primary' : 'bg-transparent border-[#333]'}`} />
-            <span className={activeSection === section.id ? 'block' : 'hidden md:block'}>
+            <div className={`w-4 h-4 border-2 transition-colors ${activeSection === section.id ? 'bg-primary border-primary' : 'bg-transparent border-[#333]'}`} />
+            <span className={activeSection === section.id ? 'block' : 'hidden'}>
               {section.label}
             </span>
           </button>
