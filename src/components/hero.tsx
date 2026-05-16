@@ -28,10 +28,15 @@ export function Hero() {
           <div className="space-y-4">
             <p className="font-body text-sm text-[#888]">Don't Have Much Time?</p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="outline" className="font-headline text-[9px] px-8 py-6 border-2 hover:border-primary">
+              <Button 
+                variant="outline" 
+                className="font-headline text-[9px] px-8 py-6 border-2 border-primary hover:bg-primary/10 shadow-[4px_4px_0px_#98CD00] transition-all"
+              >
                 VIEW RESUME
               </Button>
-              <Button className="font-headline text-[9px] px-8 py-6 bg-primary text-black hover:bg-primary/90 shadow-[4px_4px_0px_#98CD00]">
+              <Button 
+                className="font-headline text-[9px] px-8 py-6 bg-primary text-black hover:bg-primary/90 shadow-[4px_4px_0px_#98CD00] transition-all"
+              >
                 HIRE ME
               </Button>
             </div>
