@@ -35,7 +35,7 @@ export function Hero() {
                 VIEW RESUME
               </Button>
               <Button 
-                className="font-headline text-[9px] px-8 py-6 bg-primary text-black hover:bg-primary/90 shadow-[4px_4px_0px_#98CD00] transition-all"
+                className="font-headline text-[9px] px-8 py-6 bg-primary text-black hover:bg-primary/90 shadow-[4px_4px_0px_#79A400] transition-all"
               >
                 HIRE ME
               </Button>
