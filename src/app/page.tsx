@@ -13,6 +13,10 @@ import { Footer } from '@/components/footer';
 import { PixelCityBackground } from '@/components/pixel-city-background';
 import { LoadingScreen } from '@/components/loading-screen';
 
+export function MovingDivider() {
+  return <div className="w-full h-[2px] animate-moving-line my-12" />;
+}
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -36,19 +40,19 @@ export default function Home() {
           <div className="relative">
             <Hero />
             
-            <div className="w-full border-t-2 border-dashed border-primary/40 my-12" />
+            <MovingDivider />
             <Intro />
             
-            <div className="w-full border-t-2 border-dashed border-primary/40 my-12" />
+            <MovingDivider />
             <Projects />
             
-            <div className="w-full border-t-2 border-dashed border-primary/40 my-12" />
+            <MovingDivider />
             <Skills />
             
-            <div className="w-full border-t-2 border-dashed border-primary/40 my-12" />
+            <MovingDivider />
             <Experience />
             
-            <div className="w-full border-t-2 border-dashed border-primary/40 my-12" />
+            <MovingDivider />
             <Achievements />
             
             <Footer />

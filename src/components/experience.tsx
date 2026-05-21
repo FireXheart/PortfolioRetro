@@ -14,7 +14,7 @@ export function Experience() {
         <div className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-8 md:gap-12">
           {/* Level Tracker */}
           <div className="hidden md:flex flex-col items-center sticky top-24 h-fit">
-            <div className="w-[2px] h-[600px] border-l-2 border-dashed border-primary relative">
+            <div className="w-[2px] h-[600px] animate-moving-line-v relative">
               {EXPERIENCE.map((exp, i) => (
                 <div 
                   key={i}
