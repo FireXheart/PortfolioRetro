@@ -2,6 +2,6 @@
 
 This is a NextJS starter in Firebase Studio.
 
-Retro Portphol
+Retro Portpho
 
 To get started, take a look at src/app/page.tsx.
